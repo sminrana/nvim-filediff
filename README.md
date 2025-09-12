@@ -7,7 +7,6 @@ Powered by fzf-lua for file selection (optional).
 🔍 Diff two files with fuzzy file picker
 ⌨️ Enter two paths manually and diff them
 📂 Diff entire folders (all files side by side)
-🛠️ Works fully inside Neovim using :FileDiff command
 
 Using Lazy.nvim:
 
