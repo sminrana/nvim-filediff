@@ -25,7 +25,7 @@ function M.open_diff_view(file1, file2, label1, label2)
 			local tabnr = vim.api.nvim_get_current_tabpage()
 			local buf1 = vim.api.nvim_get_current_buf()
 			vim.cmd("file " .. vim.fn.fnameescape(label1 or file1))
-			setup_diff_buffer(buf1)
+			M.setup_diff_buffer(buf1)
 
 			-- Set statusline for left buffer
 			vim.api.nvim_buf_set_option(buf1, "statusline", "DIFF LEFT: %f")
@@ -43,7 +43,7 @@ function M.open_diff_view(file1, file2, label1, label2)
 			vim.cmd("vert diffsplit " .. vim.fn.fnameescape(file2))
 			local buf2 = vim.api.nvim_get_current_buf()
 			vim.cmd("file " .. vim.fn.fnameescape(label2 or file2))
-			setup_diff_buffer(buf2)
+			M.setup_diff_buffer(buf2)
 
 			-- Set statusline for right buffer
 			vim.api.nvim_buf_set_option(buf2, "statusline", "DIFF RIGHT: %f")
