@@ -43,9 +43,9 @@ Watch the demo on YouTube (https://youtu.be/7AJyT7ThS18)
 ![Watch the demo](demo.gif)
 
 ⚡ Roadmap
-Highlight added/removed lines with better colors
-Async folder diff for large directories
-Telescope integration
+
+- Highlight added/removed lines with better colors
+- Async folder diff for large directories
 
 📝 License
 MIT License © 2025 sminrana
