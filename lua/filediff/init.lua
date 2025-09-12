@@ -215,7 +215,7 @@ function M.file_diff()
 							end
 							local second_file = vim.fn.fnamemodify(selected2[1], ":p")
 							vim.notify("Second file: " .. second_file, vim.log.levels.INFO)
-							open_diff_view(first_file, second_file)
+							M.open_diff_view(first_file, second_file)
 						end,
 					},
 				})
@@ -236,7 +236,7 @@ function M.file_diff_inputs()
 				vim.notify("No second file provided", vim.log.levels.WARN)
 				return
 			end
-			open_diff_view(first, second, first, second)
+			M.open_diff_view(first, second, first, second)
 		end)
 	end)
 end
@@ -326,7 +326,7 @@ function M.folder_diff()
 				if not pair then
 					return
 				end
-				open_diff_view(pair[1], pair[2], pair[1], pair[2])
+				M.open_diff_view(pair[1], pair[2], pair[1], pair[2])
 			end)
 		end)
 	end)
