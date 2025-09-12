@@ -184,7 +184,7 @@ function M.open_diff_view(file1, file2, label1, label2)
 	end)
 end
 
-function M.file_diff()
+function M.FileDiff()
 	local ok, fzf = pcall(require, "fzf-lua")
 	if not ok then
 		vim.notify("fzf-lua not installed!", vim.log.levels.ERROR)
@@ -225,7 +225,7 @@ function M.file_diff()
 end
 
 -- New function: prompt for absolute paths for both files
-function M.file_diff_inputs()
+function M.FileDiffInputs()
 	vim.ui.input({ prompt = "Absolute path to first file: " }, function(first)
 		if not first or first == "" then
 			vim.notify("No first file provided", vim.log.levels.WARN)
@@ -241,7 +241,7 @@ function M.file_diff_inputs()
 	end)
 end
 
-function M.folder_diff()
+function M.FolderDiff()
 	vim.ui.input({ prompt = "First folder: " }, function(first)
 		if not first or first == "" then
 			return

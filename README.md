@@ -7,7 +7,7 @@ Powered by fzf-lua for file selection (optional).
 🔍 Diff two files with fuzzy file picker
 ⌨️ Enter two paths manually and diff them
 📂 Diff entire folders (all files side by side)
-🛠️ Works fully inside Neovim using :diffthis
+🛠️ Works fully inside Neovim using :FileDiff command
 
 Using Lazy.nvim:
 
@@ -16,9 +16,9 @@ Using Lazy.nvim:
 "sminrana/nvim-filediff",
 config = function()
 local filediff = require("filediff")
-vim.keymap.set("n", "<leader>fd", filediff.file_diff, { desc = "Diff two files" })
-vim.keymap.set("n", "<leader>fi", filediff.file_diff_inputs, { desc = "Diff via input paths" })
-vim.keymap.set("n", "<leader>fo", filediff.folder_diff, { desc = "Diff two folders (require absolute path)" })
+vim.keymap.set("n", "<leader>fd", filediff.FileDiff, { desc = "Diff two files" })
+vim.keymap.set("n", "<leader>fi", filediff.FileDiffInputs, { desc = "Diff via input paths" })
+vim.keymap.set("n", "<leader>fo", filediff.FolderDiff, { desc = "Diff two folders (require absolute path)" })
 end,
 }
 ```
@@ -39,7 +39,7 @@ Press <leader>fo → Pick two folders → Diff all common files
 
 📸 Demo
 
-[Video] (https://github.com/sminrana/nvim-filediff/blob/main/demo.mp4)
+[~Video] (https://youtu.be/7AJyT7ThS18)
 
 ⚡ Roadmap
 Highlight added/removed lines with better colors
