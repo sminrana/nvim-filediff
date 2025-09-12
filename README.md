@@ -38,7 +38,9 @@ Press <leader>fo → Pick two folders → Diff all common files
 
 📸 Demo
 
-[![Watch the demo] (https://github.com/sminrana/nvim-filediff/blob/main/cover.png)] (https://youtu.be/7AJyT7ThS18)
+[![Watch the demo on YouTube]] (https://youtu.be/7AJyT7ThS18)
+
+![Watch the demo](demo.gif)
 
 ⚡ Roadmap
 Highlight added/removed lines with better colors
