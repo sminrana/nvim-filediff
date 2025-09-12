@@ -27,14 +27,16 @@ fzf-lua — for fuzzy file selection
 (If not installed, the plugin falls back to vim.ui.input prompts.)
 
 ⌨️ Keymaps Mapping Action
-<leader>fd Diff two files (fzf picker)
-<leader>fi Diff two files (manual input)
-<leader>fo Diff two folders
+
+- <leader>fd Diff two files (fzf picker)
+- <leader>fi Diff two files (manual input)
+- <leader>fo Diff two folders
 
 🚀 Usage
-Press <leader>fd → Select first file → Select second file → Diff opens in splits
-Press <leader>fi → Type two file paths → Diff opens
-Press <leader>fo → Pick two folders → Diff all common files
+
+- Press <leader>fd → Select first file → Select second file → Diff opens in splits
+- Press <leader>fi → Type two file paths → Diff opens
+- Press <leader>fo → Pick two folders → Diff all common files
 
 📸 Demo
 
