@@ -16,9 +16,9 @@ Using Lazy.nvim:
 "sminrana/nvim-filediff",
 config = function()
 local diffview = require("filediff")
-vim.keymap.set("n", "<leader>fd", file_diff.file_diff, { desc = "Diff two files" })
-vim.keymap.set("n", "<leader>fi",file_diff.file_diff_inputs, { desc = "Diff via input paths" })
-vim.keymap.set("n", "<leader>fo",file_diff.folder_diff, { desc = "Diff two folders (require absolute path)" })
+vim.keymap.set("n", "<leader>fd", filediff.file_diff, { desc = "Diff two files" })
+vim.keymap.set("n", "<leader>fi", filediff.file_diff_inputs, { desc = "Diff via input paths" })
+vim.keymap.set("n", "<leader>fo", filediff.folder_diff, { desc = "Diff two folders (require absolute path)" })
 end,
 }
 ```
