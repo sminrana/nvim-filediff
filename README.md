@@ -11,14 +11,16 @@ Powered by fzf-lua for file selection (optional).
 Using Lazy.nvim:
 
 ```lua
-{
-"sminrana/nvim-filediff",
-config = function()
-local filediff = require("filediff")
-vim.keymap.set("n", "<leader>fd", filediff.FileDiff, { desc = "Diff two files" })
-vim.keymap.set("n", "<leader>fi", filediff.FileDiffInputs, { desc = "Diff via input paths" })
-vim.keymap.set("n", "<leader>fo", filediff.FolderDiff, { desc = "Diff two folders (require absolute path)" })
-end,
+return {
+  "sminrana/nvim-filediff",
+  event = "VeryLazy", -- ensures keymaps load
+  config = function()
+    local filediff = require("filediff")
+
+      vim.keymap.set("n", "<leader>fd", "<cmd>FileDiff<CR>", { desc = "Diff two files" })
+      vim.keymap.set("n", "<leader>fi", "<cmd>FileDiffInput<CR>", { desc = "Diff via input paths" })
+      vim.keymap.set("n", "<leader>fo", "<cmd>FolderDiff<CR>", { desc = "Diff two folders" })
+  end,
 }
 ```
 
@@ -47,7 +49,6 @@ Watch the demo on YouTube (https://youtu.be/7AJyT7ThS18)
 ⚡ Roadmap
 
 - Highlight added/removed lines with better colors
-- Async folder diff for large directories
 
 📝 License
 MIT License © 2025 sminrana
