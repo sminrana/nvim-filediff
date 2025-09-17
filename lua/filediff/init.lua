@@ -427,10 +427,9 @@ function M.folder_diff()
 end
 
 
-function M.setup_commands()
-  vim.api.nvim_create_user_command("FileDiff", function() M.file_diff() end, {})
-  vim.api.nvim_create_user_command("FileDiffInput", function() M.file_diff_input() end, {})
-  vim.api.nvim_create_user_command("FolderDiff", function() M.folder_diff() end, {})
-end
+vim.api.nvim_create_user_command("FileDiff", M.file_diff, {})
+vim.api.nvim_create_user_command("FileDiffInput", M.file_diff_input, {})
+vim.api.nvim_create_user_command("FolderDiff", M.folder_diff, {})
+
 
 return M
