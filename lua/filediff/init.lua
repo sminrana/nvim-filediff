@@ -224,7 +224,7 @@ function M.file_diff()
 	})
 end
 
-vim.api.nvim_create_user_command("FileDiff", file_diff, {})
+
 
 -- ================================
 -- File diff input (manual paths)
@@ -243,7 +243,7 @@ function M.file_diff_input()
 	end)
 end
 
-vim.api.nvim_create_user_command("FileDiffInput", file_diff_input, {})
+
 
 -- ================================
 -- Async folder diff (libuv spawn)
@@ -426,6 +426,11 @@ function M.folder_diff()
 	end)
 end
 
-vim.api.nvim_create_user_command("FolderDiff", folder_diff, {})
+
+function M.setup_commands()
+  vim.api.nvim_create_user_command("FileDiff", function() M.file_diff() end, {})
+  vim.api.nvim_create_user_command("FileDiffInput", function() M.file_diff_input() end, {})
+  vim.api.nvim_create_user_command("FolderDiff", function() M.folder_diff() end, {})
+end
 
 return M
