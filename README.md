@@ -13,7 +13,7 @@ Using Lazy.nvim:
 ```lua
 return {
   "sminrana/nvim-filediff",
-  event = "VeryLazy", -- ensures keymaps load
+  event = "VeryLazy", 
   config = function()
     local filediff = require("filediff")
 
